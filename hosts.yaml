@@ -1,8 +1,8 @@
 ---
-- name: Host Login
-  hosts : all
+- name: Hello World!
+  hosts: all
+ 
   tasks:
-    - name: Host Login Info test
-      command: hostname
-      register: host
-    - debug: msg="Looged into {{ host.stdout }}"
+ 
+  - name: Hello World!
+    shell: echo "Hi! Tower is working."
