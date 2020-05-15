@@ -1,5 +1,6 @@
 ---
-- hosts : all
+- name: Host Login
+  hosts : all
   tasks:
     - name: Host Login Info test
       command: hostname
