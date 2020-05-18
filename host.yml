@@ -1,8 +1,10 @@
 ---
 - name: Hello World!
   hosts: all
+  vars: 
+    package: from_playbook
  
   tasks:
  
   - name: Hello World!
-    shell: echo "Hi! Tower is working."
+    shell: echo "Hi! Tower is working. $package"
