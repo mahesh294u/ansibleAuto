@@ -5,3 +5,4 @@
       command : show user
       register: host
     - debug: msg="Looged into {{ host.stdout }}"
+    
