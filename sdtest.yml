@@ -1,8 +1,11 @@
+  
 ---
-- hosts : all
+- name: Hello World!22
+  hosts: all
+ 
   tasks:
-    - name: Host Login Info
-      command : show user
-      register: host
-    - debug: msg="Looged into {{ host.stdout }}"
-    
+ 
+  - name: Hello World!222
+    command: show user
+    register: host
+  - debug: msg="Logged into {{host.stdout }}"
