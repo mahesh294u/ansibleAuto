@@ -1,0 +1,7 @@
+---
+- hosts : all
+  tasks:
+    - name: Host Login Info
+      command : show user
+      register: host
+    - debug: msg="Looged into {{ host.stdout }}"
