@@ -6,6 +6,5 @@
   tasks:
  
   - name: Hello World!222
-    command: show user
-    register: host
-  - debug: msg="Logged into {{host.stdout }}"
+    shell: show user
+  - debug: msg="test sd"
