@@ -6,5 +6,5 @@
   tasks:
  
   - name: Hello World!222
-    shell: show user
+    shell: date
   - debug: msg="test sd"
