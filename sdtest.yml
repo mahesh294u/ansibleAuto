@@ -1,10 +1,11 @@
-  
 ---
 - name: Shell Command Test
   hosts: all
- 
+  vars:
+   - varcomamnd : "date"
+
   tasks:
- 
-  - name: Hello World!222
-    shell: {{ command }}
-  - debug: msg="test sd"
+
+   - name: Hello World!222
+     command: '{{ varcomamnd }}'
+   - debug: msg='{{ varcomamnd }}'
