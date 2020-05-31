@@ -2,10 +2,10 @@
 - name: Shell Command Test
   hosts: all
   vars:
-   - varcomamnd: ""
+     varcomamnd: ""
 
   tasks:
 
    - name: Hello World!222
-     command: "{{ varcomamnd }}"
-   - debug: msg="{{ varcomamnd }}"
+     command: {{ varcomamnd }}
+   - debug: msg={{ varcomamnd }}
