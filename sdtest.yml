@@ -1,11 +1,10 @@
 ---
-- name: Shell Command Test
+- name: Install Package
   hosts: all
-  vars:
-     varcomamnd: ""
+  vars: 
+    package: from_playbook
 
   tasks:
-
-   - name: Hello World!222
-     command: date
-   - debug: msg={{ varcomamnd }}
+  - name: Install package
+    yum: name={{ package }} state=present
+  - debug: msg = {{package}} installed 
