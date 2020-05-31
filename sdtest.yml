@@ -6,5 +6,5 @@
 
   tasks:
   - name: Install package
-    yum: name={{ package }} state=present
-  - debug: msg = "{{package}}" installed 
+    command: name={{ package }} 
+  - debug: msg = "{{package}}" command 
