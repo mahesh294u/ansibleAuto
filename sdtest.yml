@@ -7,5 +7,5 @@
   tasks:
 
    - name: Hello World!222
-     command: {{ varcomamnd }}
+     command: date
    - debug: msg={{ varcomamnd }}
