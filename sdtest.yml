@@ -1,7 +1,6 @@
 ---
 - name: Shell Command Test
   hosts: all
-  varcomamnd: ""
 
   tasks:
 
