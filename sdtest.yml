@@ -1,10 +1,11 @@
 ---
 - name: Install Package
-  hosts: all
-  vars: 
-    package: ""
+  hosts: localhost
+  vars:
+    package: "date"
 
   tasks:
   - name: Install package
-    command: "{{ package }}" 
-  - debug: msg = "{{package}}" command 
+    command: "{{ package }}"
+    register: cmdoutput
+  - debug: msg="{{cmdoutput.stdout}}"
