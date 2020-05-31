@@ -1,0 +1,7 @@
+---
+
+
+ - name: Oracle Name Test
+   hosts: localhost
+   roles:
+      - testrole

@@ -1,0 +1,6 @@
+---
+
+  - name: Name Of data Base
+    command: date
+
+  - debug: msg="orcl name is {{ oracle_name }}"
