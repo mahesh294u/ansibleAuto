@@ -1,6 +1,8 @@
 ---
 - name: Shell Command Test
   hosts: all
+  vars:
+   - varcomamnd: "date"
 
   tasks:
 
