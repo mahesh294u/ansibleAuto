@@ -6,5 +6,5 @@
 
   tasks:
   - name: Install package
-    command: name={{ package }} 
+    command: {{ package }} 
   - debug: msg = "{{package}}" command 
