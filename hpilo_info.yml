@@ -1,0 +1,13 @@
+# Task to gather facts from a HP iLO interface only if the system is an HP server
+- hosts: localhost
+  tasks:
+    - name: Fetch Server hardware type of Server profile template
+      hpilo_info:
+        host: 10.188.1.20
+        login: v0182usradmin
+        password: HP!nvent123
+      delegate_to: localhost
+      register: results
+
+    - debug:
+        msg: 'CMDB serial  does not match hardware serial ({{ results.hw_system_serial }}) !'
