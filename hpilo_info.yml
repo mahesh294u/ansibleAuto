@@ -1,19 +1,13 @@
-# Task to gather facts from a HP iLO interface only if the system is an HP server
-- hosts: localhost
-  vars:
-   - pb_var1a : ""
+---
+# This playbook prints a simple debug message
+- name: Echo Hello, Fred and Wilma
+  hosts: localhost
 
   tasks:
-    - name: Fetch Server hardware type of Server profile template
-      hpilo_info:
-        host: 10.188.1.20
-        login: v0182usradmin
-        password: HP!nvent123
-      delegate_to: localhost
-      register: results
-    - set_stats:
-          data:
-            pb_var1a: "{{ results.hw_system_serial }}"
+  - name: "playbook1 - testing input vars"
+    set_stats:
+      data:
+        pb_var1a: "test1"
+        pb_var1b: "test2"
 
-    - debug:
-        msg: 'CMDB serial  does not match hardware serial ({{ pb_var1a }}) !'
+  - debug: msg="Hello, {{ input1a }} and {{ input1b }}"
