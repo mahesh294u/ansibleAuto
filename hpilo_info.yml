@@ -1,11 +1,10 @@
----
-# This playbook prints a simple debug message
-- name: Echo Hello, Fred and Wilma
-  hosts: localhost
+- name: Hello World Sample
+  hosts: all
   vars:
-    - pb_var1a : "test"
-    - pb_var1b : ""
+  - var1 : "test"
+  
   tasks:
-  - name: "playbook1 - testing input vars"
-  - debug: msg="Hello, {{ pb_var1a }} and {{ pb_var1b }}"
+    - name: Hello Message
+      debug:
+        msg: "Hello World! "{{ var1 }}""
 
