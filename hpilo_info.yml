@@ -1,10 +1,9 @@
 - name: Hello World Sample
-  hosts: all
+  hosts: localhost
   vars:
   - var1 : "test"
-  
+
   tasks:
     - name: Hello Message
       debug:
-        msg: "Hello World! "{{ var1 }}""
-
+        msg: "Hello World! '{{ var1 }}'"
