@@ -3,14 +3,9 @@
 - name: Echo Hello, Fred and Wilma
   hosts: localhost
   vars:
-    - pb_var1a : ""
+    - pb_var1a : "test"
     - pb_var1b : ""
   tasks:
   - name: "playbook1 - testing input vars"
-    set_stats:
-      data:
-        pb_var1a: "test1"
-        pb_var1b: "test2"
-
   - debug: msg="Hello, {{ pb_var1a }} and {{ pb_var1b }}"
 
