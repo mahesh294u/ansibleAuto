@@ -7,3 +7,12 @@
     - name: Hello Message
       debug:
         msg: "Hello World! '{{ var1 }}'"
+        
+    - pause:
+        minutes: 2
+        
+    - name: Hello Message
+      debug:
+        msg: "Final Message '{{ var1 }}'"
+        
+        
