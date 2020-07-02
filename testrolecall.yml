@@ -1,7 +1,26 @@
 ---
-
-
- - name: Oracle Name Test
+ - name: Host configuration
    hosts: localhost
-   roles:
-      - testrole
+
+   vars:
+   - ssh_user: "root"
+   - ssh_pass: "P@ssw0rd123"
+
+   tasks:
+   - name: Register a new value
+     command : date
+
+   - add_host:
+       hostname: 10.188.191.92
+       ansible_user: "{{ ssh_user }}"
+       ansible_ssh_pass: "{{ ssh_pass }}"
+       groups: [ 'bmnewgroup' ]
+
+
+ - name: Host configuration
+   hosts: bmnewgroup
+
+   tasks:
+   - name: Register a new value
+     command : date
+
