@@ -13,7 +13,7 @@
    - add_host:
        hostname: 10.188.191.92
        ansible_user: "{{ ssh_user }}"
-       ansible_ssh_pass: "{{ ssh_pass }}"
+       ansible_password: "{{ ssh_pass }}"
        groups: [ 'bmnewgroup' ]
 
 
