@@ -11,14 +11,13 @@
      command : date
 
    - add_host:
-       hostname: 10.188.191.92
-       ansible_user: "{{ ssh_user }}"
-       ansible_password: "{{ ssh_pass }}"
-       groups: [ 'bmnewgroup' ]
+       hostname: orc-db-host
+       ansible_ssh_host: "10.188.191.92"
+       ansible_ssh_port: 22
 
 
  - name: Host configuration
-   hosts: bmnewgroup
+   hosts: orc-db-host
 
    tasks:
    - name: Register a new value
