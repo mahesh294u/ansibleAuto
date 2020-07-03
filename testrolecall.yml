@@ -13,7 +13,7 @@
      
    - name: Another way to call known_hosts
      known_hosts:
-       hostname: "{{ host_ip }}"
+       name: "{{ host_ip }}"
        path: ~/.ssh/known_hosts
        state: absent
 
