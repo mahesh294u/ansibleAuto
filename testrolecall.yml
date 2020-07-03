@@ -5,6 +5,7 @@
    vars:
    - ssh_user: "root"
    - ssh_pass: "P@ssw0rd123"
+   - host_ip : "10.188.182.206"
 
    tasks:
    - name: Register a new value
@@ -12,7 +13,7 @@
 
    - add_host:
        hostname: orc-db-host
-       ansible_ssh_host: "10.188.191.92"
+       ansible_ssh_host: "{{ host_ip }}"
        ansible_ssh_port: 22
 
 
